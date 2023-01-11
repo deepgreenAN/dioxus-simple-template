@@ -1,11 +1,11 @@
 use dioxus::prelude::*;
 
 fn main() {
-    dioxus::web::launch(app);
+    dioxus_web::launch(app);
 }
 
 fn app(cx: Scope) -> Element {
-    cx.render(rsx!{
+    cx.render(rsx! {
         div { "hello, wasm!" }
     })
 }
