@@ -1,11 +1,14 @@
+#![allow(clippy::derive_partial_eq_without_eq)]
+#![allow(non_snake_case)]
+
 use dioxus::prelude::*;
 
-fn main() {
-    dioxus_web::launch(app);
-}
-
-fn app(cx: Scope) -> Element {
+fn App(cx: Scope) -> Element {
     cx.render(rsx! {
         div { "hello, wasm!" }
     })
+}
+
+fn main() {
+    dioxus_web::launch(App);
 }
